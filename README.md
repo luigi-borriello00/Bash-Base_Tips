@@ -1,13 +1,13 @@
 # BASH BASE TIPS
 
-* **FIND** - PARTE DAL PERCORSO PASSATO E CERCA IL FILE/DIR DATO IN INPUT; SE MESSO(-D) MOSTRA SOLO LE DIR <br>
-es. FIND "complessa" --> find /usr/ -maxdepth 3 -type f -name "*.h" -print      <br>
+* `**FIND** namefile` - PARTE DAL PERCORSO PASSATO E CERCA IL FILE/DIR DATO IN INPUT; SE MESSO(-D) MOSTRA SOLO LE DIR <br>
+es. FIND "complessa" --> `find /usr/ -maxdepth 3 -type f -name "*.h" -print   `   <br>
         'Stampa tutti i file presenti in tutte le dir di profondità massima 3 a partire da /usr/ e che finiscono per .h'        <br>
-                     --> find /usr/ -maxdepth 3 -type f -name "*.h" -exec wc -l '{}' \;  <br>
+                     --> `find /usr/ -maxdepth 3 -type f -name "*.h" -exec wc -l '{}' \; ` <br>
         'Cerca i file come il precedente ma questo giro stampa il numero di righe di ciascuno (ogni file trovato va a sostituire le {})'        <br>
-* **GPG** -D ./NOMEFILE | **tar** xvzf - --> ESTRAE E DECRIPTA
-* **TOUCH** - CREA FILE 
-* **LS** (--color=never) = MOSTRA CONTENUTO DIRECTORY CORRENTE SENZA COLORI STRANI
+* `**GPG** -D ./NOMEFILE | **tar** xvzf` - --> ESTRAE E DECRIPTA
+`* **TOUCH** ./filename ` - CREA FILE 
+* `**LS** `= MOSTRA CONTENUTO DIRECTORY CORRENTE 
 * **CAT** - Stampa contenuto di file
 * **MV** - SPOSTA FILE E CARTELLE
 * **PS** - INFO SUI PROCESSI IN ESECUZIONE
