@@ -3,7 +3,7 @@
 * `find` - PARTE DAL PERCORSO PASSATO E CERCA IL FILE/DIR DATO IN INPUT; SE MESSO(-D) MOSTRA SOLO LE DIR <br>
 es. FIND "complex" : `find /usr/ -maxdepth 3 -type f -name "*.h" -print   `   <br>
         ---- > 'Stampa tutti i file presenti in tutte le dir di profondità massima 3 a partire da /usr/ e che finiscono per .h'        <br>
-                  * **`find`** ` /usr/ -maxdepth 3 -type f -name "*.h" -exec wc -l '{}' \; ` <br>
+                  * **`find`**` /usr/ -maxdepth 3 -type f -name "*.h" -exec wc -l '{}' \; ` <br>
         'Cerca i file come il precedente ma questo giro stampa il numero di righe di ciascuno (ogni file trovato va a sostituire le {})'        <br>
 * ` **GPG** -D ./NOMEFILE | **tar** xvzf` - --> ESTRAE E DECRIPTA
 * ` **TOUCH** ./filename ` - CREA FILE 
