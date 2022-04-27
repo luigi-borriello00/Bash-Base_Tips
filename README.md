@@ -18,7 +18,7 @@
 * `BG` -    
 * `FG` - 
 * `READ` - Read a file
-* `READ` -u {FD} -> Read from a file descriptor
+* `READ -u {FD} `- Read from a file descriptor
 * `WC` - Count the number of lines, words and characters in a file
 * `ALIAS` - Assign a command to a shortcut *(ES. ALIAS V='LS --COLOR=NEVER')*
 * `KILLALL *processName*` - Kill all processes with a given name
@@ -30,9 +30,9 @@
 * `RM` - Delete a file or a directory
 * `GREP` "STRING" - Search a string in a file or an Input
 * `TEE` - 
-* `HEAD` -N "n" NOMEFILE - Show the first n lines of a file
+* `HEAD -N "n" NOMEFILE`- Show the first n lines of a file
 * `TAIL` - Show the last n lines of a file
-* `SED` 's/oldString/newString/g' - Replace a string in a file
+* `SED 's/oldString/newString/g'` - Replace a string in a file
 * `CUT` -b 4- NOMEFILE -> Show the first **n** bytes of a file
 
 
