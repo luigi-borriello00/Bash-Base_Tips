@@ -1,39 +1,39 @@
 # BASH BASE TIPS
 
-* `find /path` - Start to "/path" and search the file/dir passed by adding `-d *dirname*`PARTE DAL PERCORSO PASSATO E CERCA IL FILE/DIR DATO IN INPUT; SE MESSO(-D) MOSTRA SOLO LE DIR <br>
-        * `find /usr/ -maxdepth 3 -type f -name "*.h" -print   `   <br>
+* `find /path` - Start to "/path" and search the file/dir passed by adding `-name`; you can also specify the type with `-d` or `-f` <br>
+    * `find /usr/ -maxdepth 3 -type f -name "*.h" -print   `   <br>
         ---- > 'Stampa tutti i file presenti in tutte le dir di profondità massima 3 a partire da /usr/ e che finiscono per .h'        <br>
-        * `find /usr/ -maxdepth 3 -type f -name "*.h" -exec wc -l '{}' \; ` <br>
+    * `find /usr/ -maxdepth 3 -type f -name "*.h" -exec wc -l '{}' \; ` <br>
         ---- > 'Cerca i file come il precedente ma questo giro stampa il numero di righe di ciascuno (ogni file trovato va a sostituire le {})'       
-* ` GPG -D ./NOMEFILE | tar xvzf` - --> ESTRAE E DECRIPTA
-* ` TOUCH ./filename ` - CREA FILE 
-* ` LS `= MOSTRA CONTENUTO DIRECTORY CORRENTE 
-* `CAT` - Stampa contenuto di file
-* `MV` - SPOSTA FILE E CARTELLE
-* `PS` - INFO SUI PROCESSI IN ESECUZIONE
-* `SUDO` - ASSUMERE TEMPORANEAMENTE I DIRITTI DI AMMINISTRATORE
-* `DU` - QUANTO SPAZIO E' UTILIZZATO            DU -H --> ALBERO DELLE DIRECTORY
-* `KILL` - MANDARE UN SEGNALE AD UN PROCESSO
-* `BG` -    ||
-* `FG` -    ||
-* `READ` - LEGGI QUALCOSA DA TASTIERA; 
-* `READ` -u {FD} -> legge da fd
-* `WC` - FORNISCE RIGHE, IL NUMERO DI PAROLE E DI BYTE DEL FILE PASSATO COME ARGOMENTO
-* `ALIAS` - ASSEGNA A "V" UN COMANDO (ES. ALIAS V='LS --COLOR=NEVER')
-* `KILLALL` - UCCIDE UNA SERIE DI PROCESSI IN BACKGROUND CON QUEL NOME_PROCESSO (ES. KILLALL NOME_PROCESSO)
-* `VI` - APRE EDITOR DI TESTO CHE SI CHIUDE CON :q!
-* `NANO` - ALTRO EDITOR DI TESTO
-* `START` - APRE APPLICAZIONE O FILE 
-* `EXIT` - DETERMINA L'EXIT STATUS DI UNO SCRIPT RESTITUITO ALLA SHELL CHIAMANTE (EXIT = 0 --> SCRIPT ANDATO A BUON FINE)
-* `CP` - COPIA IN DESTINAZIONE LA SORGENTE, SE MESSO "-R" COPIA RICORSIVAMENTE (ANCHE TUTTE LE SOTTOCARTELLE)
-* `RM` - ELIMINA FILE/DIR (SE MESSO -R RICORSIVAMENTE E SE MESSO -F FORCE OVVERO NON CHIEDE OGNI VOLTA CONFERMA)
-* `GREP` "STRINGA" - CERCA LA CORRISPONDENZA DI "STRINGA" DENTRO UN TESTO(DI DEFAULT PRESO IN INPUT)
-* `TEE` - CHE LEGGE DATI DALLO STANDARD INPUT E LI VISUALIZZA SULLO STANDARD OUTPUT, MEMORIZZANDOLI NEL CONTEMPO NEI FILE SPECIFICATI
-* `HEAD` -N "n" NOMEFILE - RESTITUISCE LE PRIME n RIGHE DEL FILE "NOMEFILE"
-* `TAIL` - COME HEAD, MA PARTE DALLA CODA
-* `SED` 's/STRINGADASOSTITUIRE/NUOVASTRINGA/g' - EDITOR DI STRINGA (s STA PER SOSTITUISCI E g PER GLOBALMENTE(TUTTE LE OCCORRENZE))
-* `CUT` -b 4- NOMEFILE -> MOSTRAMI IL CONTENUTO A PARTIRE DAL 4° CARATTERE IN POI <br>
-        CUT -b -4 NOMEFILE -> MOSTRAMI IL CONTENUTO FINO AL 4° CARATTERE
+* ` GPG -D ./NOMEFILE | tar xvzf` - Extraxt and decrypt a file with GPG
+* ` TOUCH ./filename ` - Create a file
+* ` LS ` - Show the files in the current directory
+* `CAT` - Show the content of a file
+* `MV /oldPath /newPath` - Move a file or a directory
+* `PS` - Show the processes running in the system
+* `SUDO *command*` - Run a command as root
+* `DU` - Show the disk usage of the current directory
+    `DU -H` - Show the disk usage in human readable format
+* `KILL` - Kill a process
+* `BG` -    
+* `FG` - 
+* `READ` - Read a file
+* `READ` -u {FD} -> Read from a file descriptor
+* `WC` - Count the number of lines, words and characters in a file
+* `ALIAS` - Assign a command to a shortcut *(ES. ALIAS V='LS --COLOR=NEVER')*
+* `KILLALL *processName*` - Kill all processes with a given name
+* `VI` - Open a file in vim editor
+* `NANO` - Open a file in nano editor
+* `START` - Start a program
+* `EXIT` - Show the status of the runned script
+* `CP /oldPath /newPath` - Copy a file or a directory
+* `RM` - Delete a file or a directory
+* `GREP` "STRING" - Search a string in a file or an Input
+* `TEE` - 
+* `HEAD` -N "n" NOMEFILE - Show the first n lines of a file
+* `TAIL` - Show the last n lines of a file
+* `SED` 's/oldString/newString/g' - Replace a string in a file
+* `CUT` -b 4- NOMEFILE -> Show the first **n** bytes of a file
 
 
 ## ISTALLAZIONE PACCHETTI
